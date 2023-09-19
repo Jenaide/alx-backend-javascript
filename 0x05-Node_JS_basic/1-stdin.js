@@ -8,9 +8,13 @@ const rl = readline.createInterface({
 console.log('Welcome to Holberton School, what is your name?');
 
 rl.on('line', (name) => {
-  console.log(`Your name is: ${name}`);
+  if (name === '') {
+    console.log("Your name was not provided.");
+  } else {
+    console.log(`Your name is: ${name}`);
+  }
 });
 
-rl.on('end', () => {
+rl.on('close', () => {
   console.log('This important software is now closing');
 });
