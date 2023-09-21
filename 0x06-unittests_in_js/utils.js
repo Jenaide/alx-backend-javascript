@@ -1,5 +1,5 @@
 const Utils = {
-  calculateNumber = (type, a, b) => {
+  calculateNumber: (type, a, b) => {
     const roundedA = Math.round(a);
     const roundedB = Math.round(b);
 
@@ -13,7 +13,7 @@ const Utils = {
       }
       return roundedA / roundedB;
     } else {
-      throw new Error('Invalid Type.')
+      throw new Error('Invalid Type.');
     }
   }
 };
